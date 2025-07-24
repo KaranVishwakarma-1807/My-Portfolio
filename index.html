@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Karan Vishwakarma – Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio website showcasing projects, experience and contact information for Karan Vishwakarma."
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header / Navigation -->
+    <header class="header container flex justify-between items-center py-16">
+      <h1 class="logo">Karan&nbsp;Vishwakarma</h1>
+      <nav class="nav">
+        <ul class="flex gap-16">
+          <li><a href="#home" class="nav__link">Home</a></li>
+          <li><a href="#projects" class="nav__link">Projects</a></li>
+          <li><a href="#experience" class="nav__link">Experience</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+      <!-- Hero Section -->
+      <section id="home" class="hero-section container flex flex-col items-center text-center py-32">
+        <h2 class="hero__title">Hello, I'm <span class="highlight">Karan Vishwakarma</span></h2>
+        <p class="hero__subtitle">A passionate Full-Stack Learning Developer crafting engaging digital experiences.</p>
+        <a href="#projects" class="btn btn--primary mt-8">View Projects</a>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects" class="projects-section container py-32">
+        <h2 class="section-title mb-8">Projects</h2>
+        <div id="projects-grid" class="projects-grid grid"></div>
+        <div id="projects-loader" class="loader mt-8 hidden"></div>
+        <p id="projects-error" class="error-text hidden"></p>
+      </section>
+
+      <!-- Experience Section -->
+      <section id="experience" class="experience-section container py-32">
+        <h2 class="section-title mb-8">Experience</h2>
+        <div id="timeline" class="timeline flex flex-col"></div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="contact-section container py-32">
+        <h2 class="section-title mb-8">Contact</h2>
+        <form id="contact-form" class="contact-form flex flex-col gap-16 max-w-2xl">
+          <div class="form-group">
+            <label class="form-label" for="name">Name</label>
+            <input class="form-control" id="name" name="name" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+        </form>
+        <div id="toast" class="toast hidden" role="status">Message sent! I'll get back to you soon.</div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer container py-16 text-center">
+      <p>
+        Built with ❤️ by Karan Vishwakarma ·
+        <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+        ·
+        <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+      </p>
+    </footer>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
